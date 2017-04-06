@@ -1,4 +1,4 @@
-package test.com.twitter.poruke;
+package com.twitter.poruke;
 
 import static org.junit.Assert.*;
 
@@ -30,13 +30,11 @@ public class TwitterPorukaTest {
 	@Test(expected = java.lang.RuntimeException.class)
 	public void testSetKorisnikPrazan() {
 		poruka.setKorisnik("");
-		assertEquals(java.lang.RuntimeException.class, poruka.getKorisnik());
 	}
 	
 	@Test(expected = java.lang.RuntimeException.class)
 	public void testSetKorisnikNull() {
 		poruka.setKorisnik(null);
-		assertEquals(java.lang.RuntimeException.class, poruka.getKorisnik());
 	}
 
 	@Test
@@ -48,13 +46,11 @@ public class TwitterPorukaTest {
 	@Test(expected = java.lang.RuntimeException.class)
 	public void testSetPorukaNull() {
 		poruka.setPoruka(null);
-		assertEquals(java.lang.RuntimeException.class, poruka.getPoruka());
 	}
 	
 	@Test(expected = java.lang.RuntimeException.class)
 	public void testSetPorukaPrazan() {
 		poruka.setPoruka("");
-		assertEquals(java.lang.RuntimeException.class, poruka.getPoruka());
 	}
 	
 	@Test(expected = java.lang.RuntimeException.class)
@@ -62,7 +58,6 @@ public class TwitterPorukaTest {
 		poruka.setPoruka("popopopopopopopopopopopopopopopopopopopopopopopopopo"
 						+"popopopopopopopopopopopopopopopopopopopopopopopopopo"
 						+"popopopopopopopopopopopopopopopopopopopopopopopopopo");
-		assertEquals(java.lang.RuntimeException.class, poruka.getPoruka());
 	}
 
 	@Test
